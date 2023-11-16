@@ -1,13 +1,3 @@
-- docker compose up -d
-- docker ps
-- docker exec -u root -it <CONTAINER ID OR CONTAINER NAME> /bin/bash
-- cd ../../app/Control
-- Generar el token en SonarQube( My Account -> Security -> Generate Tokens -> Type: user token -> Name: token-duoc-test -> Generar token )
-- /app/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner -Dsonar.login=<TOKEN> // probar -Dsonar.token=<TOKEN>
-- esperar a que termine(referencia: 16 minutos)
-- Nota: parece que requiere tener node instalado en el contenedor para algunas cosas, tratar de instalarlo en el contenedor.
-
-
 # Instrucciones de Uso
 
 Este documento proporciona los pasos necesarios para trabajar con Docker y SonarQube.
