@@ -1,10 +1,16 @@
-# Instrucciones de Uso
+# Repositorio de ejecución de pruebas para el proyecto de inventario
+ - **Este README incluye Instrucciones para probar Sonarqube y aparte Instrucciones para levantar el sistema de inventarios y probarlo como usuario**
 
-Este documento proporciona los pasos necesarios para trabajar con Docker y SonarQube.
+
+# Instrucciones de uso para test de SonarQube
 
 ## Configuración con Docker
 
 Sigue estos pasos para configurar y ejecutar tu entorno Docker:
+
+1. **Clona el repositorio**: `git clone <REPO-URL>`
+
+2. **Entrar a la carpeta del proyecto**: `cd <PROJECT-NAME>`
 
 1. **Construir y iniciar contenedor con Docker Compose**: `docker compose up -d`
 
@@ -38,7 +44,15 @@ Para configurar SonarQube y ejecutar un análisis de código, sigue estos pasos:
     - Cuando el proceso haya terminado puedes ver el reporte del analisis en `http://localhost:9000`
 
 
-# Referencias
+## Referencias para configuración de SonarQube
   - Pasos de instalación local de Sonarqube (El Dockerfile se basa en el comando que proporciona la documentación, aunque para este caso se añade Node.js, que es requerido por SonarQube): [DOCUMENTACIÓN](https://docs.sonarsource.com/sonarqube/latest/try-out-sonarqube/)
   - Instalar Node.js en linux por terminal: [DOCUMENTACIÓN](https://github.com/nodesource/distributions#installation-instructions)
   - Tutorial de SonarQube para Windows (Me sirvió pero adapte los pasos para linux y Docker): [VIDEO](https://www.youtube.com/watch?v=6pLj3KVglFA)
+
+# Instrucciones de uso para levantar codigo fuente con Docker
+Nota: No es necesario levantar el codigo fuente para ejecutar el analisis de SonarQube, pero sí si se desea levantar el codigo fuente para ver el proyecto y hacer otro tipo de test.
+
+1. **Clona el repositorio**: `git clone <REPO-URL>`
+2. **Moverse a carpeta del codigo fuente**: `cd ./<PROJECT-NAME>/Control/
+3. **Levantar el codigo fuente con Docker Compose**: `docker compose up -d`
+4. **Ingresar a la aplicación**: Navegar a `http://localhost:80/` y logearse con las credenciales `admin` y `admin`

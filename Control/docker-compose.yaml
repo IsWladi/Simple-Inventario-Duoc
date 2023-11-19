@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: simple_stock_web
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    container_name: simple_stock_db
+    build: ./BD/
+    environment:
+      MYSQL_DATABASE: simple_stock
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

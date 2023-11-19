@@ -1,6 +1,7 @@
 version: '3.9'
 services:
   sonarqube:
+    container_name: sonarqube_web_analisis_estatico
     build: .
     ports:
       - 9000:9000
