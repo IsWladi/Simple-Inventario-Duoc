@@ -10,7 +10,7 @@ Sigue estos pasos para configurar y ejecutar tu entorno Docker:
 
 1. **Clona el repositorio**: `git clone <REPO-URL>`
 
-2. **Entrar a la carpeta del proyecto**: `cd <PROJECT-NAME>`
+2. **Entrar a la carpeta del proyecto**: `cd ./Simple-Inventario-Duoc/`
 
 1. **Construir y iniciar contenedor con Docker Compose**: `docker compose up -d`
 
@@ -53,6 +53,6 @@ Para configurar SonarQube y ejecutar un análisis de código, sigue estos pasos:
 Nota: No es necesario levantar el codigo fuente para ejecutar el analisis de SonarQube, pero sí si se desea levantar el codigo fuente para ver el proyecto y hacer otro tipo de test.
 
 1. **Clona el repositorio**: `git clone <REPO-URL>`
-2. **Moverse a carpeta del codigo fuente**: `cd ./<PROJECT-NAME>/Control/
+2. **Moverse a carpeta del codigo fuente**: `cd ./Simple-Inventario-Duoc/Control/
 3. **Levantar el codigo fuente con Docker Compose**: `docker compose up -d`
 4. **Ingresar a la aplicación**: Navegar a `http://localhost:80/` y logearse con las credenciales `admin` y `admin`
