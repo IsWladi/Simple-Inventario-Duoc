@@ -53,7 +53,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
 				$user_name = mysqli_real_escape_string($con,(strip_tags($_POST["user_name"],ENT_QUOTES)));
                 $user_email = mysqli_real_escape_string($con,(strip_tags($_POST["user_email"],ENT_QUOTES)));
 				$user_password = $_POST['user_password_new'];
-                $user_password_hash = crypt($user_password);
+                $user_password_hash = crypt($user_password, "oneturteou4598onetur1598tr");
 				$date_added=date("Y-m-d H:i:s");
 
 

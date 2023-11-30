@@ -8,6 +8,8 @@ services:
       - "80:80"
     volumes:
       - .:/var/www/html
+    networks:
+      - simple_stock_net
     depends_on:
       - db
 
@@ -20,5 +22,22 @@ services:
     volumes:
       - db_data:/var/lib/mysql
 
+  zap: # https://www.zaproxy.org/docs/docker/webswing/
+    container_name: simple_stock_zap
+    image: ghcr.io/zaproxy/zaproxy:stable
+    user: zap
+    command: zap-webswing.sh
+    ports:
+      - "8080:8080"
+      - "8090:8090"
+    networks:
+      - simple_stock_net
+    volumes:
+      - ./zap/:/home/zap/
+    depends_on:
+      - app
+
 volumes:
   db_data:
+networks:
+  simple_stock_net:

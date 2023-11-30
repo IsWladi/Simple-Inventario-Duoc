@@ -2,5 +2,5 @@ projectKey=Control
 serverUrl=http://localhost:9000
 serverVersion=9.9.3.79811
 dashboardUrl=http://localhost:9000/dashboard?id=Control
-ceTaskId=AYvZKTSsM79ltOqnNlwu
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYvZKTSsM79ltOqnNlwu
+ceTaskId=AYv5RhOm2zJvocxbzc_m
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYv5RhOm2zJvocxbzc_m
