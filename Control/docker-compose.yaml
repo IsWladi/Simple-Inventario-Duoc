@@ -19,6 +19,8 @@ services:
     environment:
       MYSQL_DATABASE: simple_stock
       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - simple_stock_net
     volumes:
       - db_data:/var/lib/mysql
 
