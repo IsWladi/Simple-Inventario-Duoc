@@ -1,6 +1,5 @@
 # Repositorio de ejecución de pruebas para el proyecto de inventario
- - **Este README incluye Instrucciones para probar Sonarqube y aparte Instrucciones para levantar el sistema de inventarios y probarlo como usuario**
-
+ - **Este README incluye Instrucciones para probar Sonarqube y aparte Instrucciones para levantar el sistema de inventarios y probarlo como usuario y usar OWASP ZAP**
 
 # Instrucciones de uso para test de SonarQube
 
@@ -49,10 +48,12 @@ Para configurar SonarQube y ejecutar un análisis de código, sigue estos pasos:
   - Instalar Node.js en linux por terminal: [DOCUMENTACIÓN](https://github.com/nodesource/distributions#installation-instructions)
   - Tutorial de SonarQube para Windows (Me sirvió pero adapte los pasos para linux y Docker): [VIDEO](https://www.youtube.com/watch?v=6pLj3KVglFA)
 
-# Instrucciones de uso para levantar codigo fuente con Docker
+# Instrucciones de uso para levantar codigo fuente con Docker y testear la app con OWASP ZAP
 Nota: No es necesario levantar el codigo fuente para ejecutar el analisis de SonarQube, pero sí si se desea levantar el codigo fuente para ver el proyecto y hacer otro tipo de test.
 
+## Levantar contenedores
 1. **Clona el repositorio**: `git clone <REPO-URL>`
 2. **Moverse a carpeta del codigo fuente**: `cd ./Simple-Inventario-Duoc/Control/
 3. **Levantar el codigo fuente con Docker Compose**: `docker compose up -d`
-4. **Ingresar a la aplicación**: Navegar a `http://localhost:80/` y logearse con las credenciales `admin` y `admin`
+4. **Ingresar a la aplicación de inventario**: Navegar a `http://localhost:80/` y logearse con las credenciales `admin` y `admin`
+1. **Ingresar a la aplicación de OWASP ZAP**: http://localhost:8080/zap
